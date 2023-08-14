@@ -26,4 +26,4 @@ if file_type == "pdf": #If the filetype is pdf
     reversed_pages = current_file_pages[::-1]
     create_pdf(output_file_name, reversed_pages) #Finally, we call the create_pdf function
 
-print(output_file_name) #We just the output filename
+print(output_file_name) #We just print the output filename
