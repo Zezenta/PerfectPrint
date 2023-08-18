@@ -3,7 +3,7 @@ import re #imports the regex that we are going to use
 from docx import Document #the library that supports docx manipulation
 
 file_raw_name = input("Please enter the name of the file that you want to alter. EXAMPLE: document.pdf ")
-pattern = r'([\w\_\-]+)\.(\w+)' #This regex indicates any kind of alphanumerical number, and "-" or "_" characters, one time or more. Then, a single period. And finally, captures any alphanumerical text (hence, the extension)
+pattern = r'([\w\s\_\-]+)\.(\w+)' #This regex indicates any kind of alphanumerical number, and "-" or "_" characters, one time or more. Then, a single period. And finally, captures any alphanumerical text (hence, the extension)
 file_groups = re.match(pattern, file_raw_name) #Apply the regex pattern to the file_raw_name
 file_name = file_groups.group(1) #We extract the name of the file
 file_type = file_groups.group(2) #We extract its type
